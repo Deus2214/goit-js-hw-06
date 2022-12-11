@@ -1,8 +1,14 @@
-const input = document.querySelector('#name-input');
+const inputEl = document.querySelector('#name-input');
+// console.log(inputEl);
+const textEl = document.querySelector('#name-output');
+// console.log(textEl);
 
-function onInput(evt){
-    const query = evt.currentTarget.value;
-    if(!query){
-        console.log('Hello, Anonymous!');
-    }
+inputEl.addEventListener('input',onInput);
+
+function onInput(event) {
+textEl.textContent = event.currentTarget.value;
+if(inputEl.value === ""){
+    return textEl.textContent = "Anonymous";
+ }
+ 
 }
