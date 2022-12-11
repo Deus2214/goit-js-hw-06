@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const list = document.querySelector(".list");
+
+const newimages = ["White and Black Long Fur Cat", "TOrange and White Koi Fish Near Yellow Koi Fish", "Group of Horses Running"];
+const markup = newimages
+  .map((images) => `<li class="list-item new">${images}</li>`)
+  .join("");
+
+// list.insertAdjacentHTML( markup);
+list.insertAdjacentHTML("beforebegin", "<h2>newimages</h2>");
